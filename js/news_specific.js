@@ -69,7 +69,7 @@ function createArticle(items) {
       const article = document.createElement("article");
       article.classList.add("article_main");
       article.innerHTML = `
-        <h1 data-i18n="news_elem_h${e.id}">${title}</h1>
+        <h1 data-i18n="news_elem_h3${e.id}">${title}</h1>
         <div data-item-id="${e.id}" class="article_outer">
           <img class="img_main" src="${imgSrc}" alt="news_image">
           <div class="article">

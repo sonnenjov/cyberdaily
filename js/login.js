@@ -1,74 +1,37 @@
-var password_input = document.getElementById("password");
-var password_rules = document.getElementById("rules_password");
 
-var upper = document.getElementById("rule-upper");
-var number = document.getElementById("rule-number");
-var special = document.getElementById("rule-special");
+const passwordInput = document.getElementById("password");
+const passwordRules = document.getElementById("rules_password");
 
+const ruleUpper = document.getElementById("rule-upper");
+const ruleNumber = document.getElementById("rule-number");
+const ruleSpecial = document.getElementById("rule-special");
 
-
-
-
-password_input.addEventListener("focus", function () {
-  password_rules.classList.add("active");
+passwordInput.addEventListener("focus", () => {
+  passwordRules.classList.add("active");
 });
 
-password_input.addEventListener("blur", function () {
-  password_rules.classList.remove("active");
+passwordInput.addEventListener("blur", () => {
+  passwordRules.classList.remove("active");
 });
 
-async function loadUsers() {
-  const response = await fetch("../js/users.json");
-  return response.json();
-}
+passwordInput.addEventListener("input", () => {
+  const value = passwordInput.value;
+
+  ruleUpper.classList.toggle("valid", /[A-Z]/.test(value));
+  ruleNumber.classList.toggle("valid", /[0-9]/.test(value));
+  ruleSpecial.classList.toggle("valid", /[^A-Za-z0-9]/.test(value));
+});
+
+
 
 function isEmail(value) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
 }
 
-
-
-
-
-
-
-
-
-
-document.getElementById("login_form").addEventListener("submit", async e => {
-  e.preventDefault();
-
-  const identifier = document.getElementById("username_email").value.trim();
-  const message = document.getElementById("text_message");
-
-  const passwordHash = await hashPassword(
-    document.getElementById("password").value
-  );
-
-  const users = await loadUsers();
-
-  const user = users.find(u =>
-    u.username === identifier || u.email === identifier
-  );
-
-  if (!user || user.password !== passwordHash) {
-    message.textContent = "Invalid credentials.";
-    return;
-  }
-
-  message.textContent = "Login successful (demo).";
-  localStorage.setItem("loggedUser", user.username);
-  window.location.href = "../pages/login_success.html";
-});
-
-password.addEventListener("input", () => {
-  const value = password.value;
-
-  upper.classList.toggle("valid", /[A-Z]/.test(value));
-  number.classList.toggle("valid", /[0-9]/.test(value));
-  special.classList.toggle("valid", /[^A-Za-z0-9]/.test(value));
-});
-
+async function loadUsers() {
+  const response = await fetch("../js/users.json");
+  return response.json();
+}
 
 async function hashPassword(password) {
   const encoder = new TextEncoder();
@@ -78,3 +41,43 @@ async function hashPassword(password) {
   return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
 }
 
+
+
+document.getElementById("login_form").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  const identifierInput = document.getElementById("username_email");
+  const message = document.getElementById("text_message");
+
+  const identifier = identifierInput.value.trim();
+  const password = passwordInput.value;
+
+  if (!identifier || !password) {
+    message.textContent = "Please fill in all fields.";
+    return;
+  }
+
+  if (identifier.includes("@") && !isEmail(identifier)) {
+    message.textContent = "Invalid email format.";
+    return;
+  }
+
+  const users = await loadUsers();
+  const passwordHash = await hashPassword(password);
+
+  const user = users.find(u => {
+    return isEmail(identifier)
+      ? u.email === identifier
+      : u.username === identifier;
+  });
+
+  if (!user || user.password !== passwordHash) {
+    message.textContent = "Invalid credentials.";
+    return;
+  }
+
+  message.textContent = "Login successful (demo).";
+  localStorage.setItem("loggedUser", user.username);
+
+  window.location.href = "../pages/login_success.html";
+});

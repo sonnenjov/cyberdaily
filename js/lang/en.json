@@ -35,6 +35,9 @@
   "news_elem_p2":"A well-known hacking group has released new tools that make it easier to carry out sophisticated attacks against targets around the world.",
   "news_elem_h33":"The government is introducing new measures to fight cybercrime",
   "news_elem_p3":"After a series of hacking attacks, the government announced new measures and laws to fight cybercrime more effectively.",
-  "more_news": "More News"
+  "more_news": "More News",
+  "form_button":"Send",
+  "confirm_text":"Message sent"
+
 
 }

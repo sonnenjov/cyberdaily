@@ -35,5 +35,7 @@
   "news_elem_p2":"Poznata hakerska grupa objavila je nove alate koji olakšavaju izvođenje sofisticiranih napada na ciljeve širom sveta.",
   "news_elem_h33":"Vlada uvodi nove mere za borbu protiv sajber kriminala",
   "news_elem_p3":"Nakon niza hakerskih napada, vlada je najavila nove mere i zakone kako bi se efikasnije borila protiv sajber kriminala.",
-  "more_news": "Jos vesti"
+  "more_news": "Jos vesti",
+  "form_button":"Posalji",
+  "confirm_text":"Poruka poslata"
 }
