@@ -24,7 +24,7 @@ async function setLanguage(lang, newsItems = []) {
   let translations = await loadTranslations(lang);
 
   newsItems.forEach((item, index) => {
-    const titleKey = `news_elem_h${index}`;
+    const titleKey = `news_elem_h3${index}`;
     const descKey = `news_elem_p${index}`;
     if (!translations[titleKey]) translations[titleKey] = item.title;
     if (!translations[descKey]) translations[descKey] = item.description;
