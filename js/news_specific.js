@@ -85,7 +85,7 @@ function createArticle(items) {
         <div data-item-id="${e.id}" onclick="viewDetails(this)" class="article_secondary_outer">
           <img class="secondary_img" src="${imgSrc}" alt="news_image">
           <div class="article">
-            <h3 data-i18n="news_elem_h${e.id}">${title}</h3>
+            <h3 data-i18n="news_elem_h3${e.id}">${title}</h3>
             <p data-i18n="news_elem_p${e.id}">${description}</p>
             <small>${e.date}</small>
           </div>
