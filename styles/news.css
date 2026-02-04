@@ -253,17 +253,18 @@ h1 {
 
 .article h3 {
   font-family: Gotham_Bold;
-  font-size: 1em;
+  font-size: 0.6em;
 }
 
 .article p {
   font-family: Gotham_Medium;
-  font-size: 0.7em;
+  font-size: 0.5em;
 
 }
 
 .article small {
   font-family: Gotham_Thin;
+  font-size: 0.4em;
 }
 
 /* 

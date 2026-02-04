@@ -177,10 +177,10 @@ transition: 500ms ease;
     #main_nav.mobile div#list_container.clicked_burger ul {
       width: 70vw !important;
       position: fixed !important;
-      padding-top: 10em !important;
+      padding-top: 5em !important;
       margin: 0 !important;
       display: flex !important;
-      height: auto !important;
+      height: 100vh !important;
       top: 0 !important;
       bottom: 0 !important;
       right: 0 !important;
@@ -194,6 +194,9 @@ transition: 500ms ease;
       box-shadow: -7px 0px 14px -5px rgba(21,21,20,0.71) !important;
       transition: 500ms ease-in !important;
 
+    }
+    #main_nav.mobile div#list_container.clicked_burger ul a li {
+      font-size: 0.8em !important;
     }
     #main_nav.mobile div#logo_container picture img  { content: url('../images/logos/phonenoscroll.png') !important;
     }

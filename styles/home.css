@@ -98,6 +98,7 @@ div#text_logo_inner  p {
  #separator h5 {
  color: var(--main_color_text);
  padding-bottom: 1em;
+ font-size: 0.6em;
  border-bottom:1px solid var(--secondary_color_text) !important;
  }
  #news_div {
