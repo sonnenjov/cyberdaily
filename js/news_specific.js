@@ -5,10 +5,10 @@ var storedItem;
 var normalized = [];
 
 var news_imgs = {
-  img1: "/images/news/360_F_1613433801_GcnUeDmRFRUsUT3xkkCJsXvwzRCqRdXU.jpg",
-  img2: "/images/news/cyber-security-network-data-protection-600nw-2656907229.jpg",
-  img3: "/images/news/images-2.fill.size_2000x1334.v1611688517.jpg",
-  img4: "/images/news/istockphoto-2174551157-612x612.jpg"
+  img1: "../images/news/360_F_1613433801_GcnUeDmRFRUsUT3xkkCJsXvwzRCqRdXU.jpg",
+  img2: "../images/news/cyber-security-network-data-protection-600nw-2656907229.jpg",
+  img3: "../images/news/images-2.fill.size_2000x1334.v1611688517.jpg",
+  img4: "../images/news/istockphoto-2174551157-612x612.jpg"
 };
 
 var APIurl = "https://vebdizajn-4.onrender.com/api/vebdizajn/hakerske-vesti";
