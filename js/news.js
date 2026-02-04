@@ -58,5 +58,5 @@ function viewDetails(clickedElement) {
 
   localStorage.setItem("selectedProduct", JSON.stringify(selectedItem))
 
-  window.location.href = `/pages/news_specific.html`
+  window.location.href = `../pages/news_specific.html`
 }

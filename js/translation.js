@@ -1,5 +1,5 @@
 async function loadTranslations(lang) {
-  const response = await fetch(`./lang/${lang}.json`);
+  const response = await fetch(`../js/lang/${lang}.json`);
   if (!response.ok) throw new Error("Failed to load translations");
   const translations = await response.json();
   return translations;

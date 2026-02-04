@@ -99,7 +99,7 @@ function viewDetails(clickedElement) {
   const itemId = clickedElement.getAttribute('data-item-id');
   const selectedItem = normalized.find(e => e.id === parseInt(itemId));
   localStorage.setItem("selectedProduct", JSON.stringify(selectedItem));
-  window.location.href = `/pages/news_specific.html`;
+  window.location.href = `../pages/news_specific.html`;
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
