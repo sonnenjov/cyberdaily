@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <link rel="stylesheet" href="/styles/main.css">
+  <link rel="stylesheet" href="/styles/loader.css">
+ <link rel="stylesheet" href="/styles/news.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Daily - News</title>
+  <link href="https://cdn.jsdelivr.net" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="images/favicon/favicon.svg" />
+<link rel="shortcut icon" href="images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<link rel="manifest" href="images/favicon/site.webmanifest" />
+</head>
+<body>
+<!-- LOADER -->
+ <div id="page-loader">
+  <div class="spinner"></div>
+</div>
+
+<!-- NAV  -->
+  <nav id="main_nav" class="nav vw-100 h-auto d-flex p-3 flex-row pe-5 ps-5">
+    <div id="logo_container" class="w-25">
+      <picture>
+        <source srcset="./images/logos/phonenoscroll.png" media="max-width:900px">
+        <img class="w-100 pe-2" src="../images/logos/desktopnoscroll.png" alt="logo" id="logo_nav">
+      </picture>
+    </div>
+    <div class=" ps-5  w-75 h-auto " id="list_container">
+      <ul id="list" class="d-flex flex-row gap-5 w-100 list-unstyled h-100 justify-content-between   align-items-end ps-5 mb-0">
+        <a class="list_elem_link " href="../index.html">
+           <li  data-i18n="home_nav_elem_HOME" class="list_elem">
+            HOME
+          </li>
+        </a>
+         <a class="list_elem_link" href="/pages/contact.html">
+          <li  data-i18n="home_nav_elem_CONTACT" class="list_elem">
+            CONTACT
+          </li>
+        </a>
+         <a class="list_elem_link " href="/pages/about.html">
+         <li  data-i18n="home_nav_elem_ABOUT" class="list_elem">
+            ABOUT
+          </li>
+        </a>
+         <a class="list_elem_link"  href="/pages/login.html">
+          <li  data-i18n="home_nav_elem_LOGIN" class="list_elem">
+            LOGIN
+          </li>
+        </a>
+         <a class="list_elem_link active" href="/pages/news.html">
+          <li  data-i18n="home_nav_elem_NEWS" class="list_elem">
+            NEWS            
+          </li>
+        </a>
+         <div class="lang_btns">
+        <button onclick="setLanguage('en')">EN</button>
+        /
+        <button onclick="setLanguage('rs')">SR</button>
+      </div>
+      </ul>
+    </div>
+    <div  id="burger_main">
+      <div id="burger">
+      </div>
+    </div>
+  </nav>
+<!--  -->
+
+
+<!-- MAIN PAGES -->
+  <main class="main_page">
+    <h1 data-i18n="home_nav_elem_NEWS" id="news_header">NEWS</h1>
+    <div id="news_div_main">
+      
+    </div>
+    <h5 data-i18n="more_news">More News</h5>
+    <div id="news_div_secondary">
+      
+    </div>
+  </main>
+<!--  -->
+
+<!-- FOOTER -->
+   <footer id="footer" class="shadow-lg wv-100  d-flex flex-row ">
+    <div class="w-25 h-auto d-flex align-items-center " id="logo_menu">
+      <img id="footer_img" class="" src="../images/logos/blackangle.png" alt="logo_footer">
+      <ul class="w-100 h-auto gap-4 list-unstyled d-flex align-items-center m-0 ps-sm-4" id="list_footer"> 
+          <a class="list_elem_link_footer" href="/pages/about.html">
+         <li  data-i18n="home_nav_elem_ABOUT" class="list_elem">
+            ABOUT
+          </li>
+        </a>
+         <a class="list_elem_link_footer" href="/pages/contact.html">
+         <li  data-i18n="home_nav_elem_NEWS" class="list_elem">
+            CONTACT
+          </li>
+        </a>
+         <a class="list_elem_link_footer" href="/pages/news.html">
+         <li  data-i18n="home_nav_elem_NEWS" class="list_elem">
+            NEWS            
+          </li>
+        </a>
+      </ul>
+    </div>
+    <div class="w-75 d-flex flex-row align-items-center justify-content-end " id="icons">
+      <a href="https://www.instagram.com/jasamsone/" target="_blank" id="icon">
+        <img src="../images/logos/instagram-logo-instagram-logo-transparent-instagram-icon-transparent-free-free-png.png" alt="instagram_logo" id="instagram">
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/nenad-jovanovic-342734263/" id="icon">
+        <img src="../images/logos/vecteezy_linkedin-logo-png-linkedin-icon-transparent-png_18930585_835.png" alt="linkedin_logo" id="linkedin" >
+      </a>
+    </div>
+  </footer>
+<!--  -->
+
+<script src="../js/main.js"></script>
+<script src="../js/news_specific.js"></script>
+<script src="../js/loader.js"></script>
+<script src="../js/translation.js"></script>
+</body>
+</html>

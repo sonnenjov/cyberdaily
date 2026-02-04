@@ -1,0 +1,387 @@
+/* 
+   GENERAL
+ */
+
+#news_div,
+#news_div_main,
+#news_div_secondary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 3em;
+}
+
+/* 
+   REGULAR NEWS (DESKTOP)
+ */
+h1 {
+  align-self: self-start;
+}
+.article_outer {
+  width: 100%;
+  height: 25em;
+  margin: 3em auto;
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 0 16px #affffe23;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article_outer:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 16px #affffe54;
+}
+
+.article_outer img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article {
+  width: 60%;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--main_color_text);
+}
+
+.article h3 {
+  font-family: Gotham_Bold;
+  font-size: 2em;
+}
+
+.article p {
+  font-family: Gotham_Medium;
+}
+
+.article small {
+  font-family: Gotham_Thin;
+}
+
+/* 
+   NEWS HEADER
+ */
+
+#news_header {
+  padding: 6em 1.5em 1.5em;
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+}
+
+/* 
+   MAIN ARTICLE (SPECIFIC)
+ */
+
+#news_div_main article.article_main {
+  cursor: default;
+  flex-direction: column ;
+  padding:3em;
+  width:100%;
+}
+
+#news_div_main article.article_main .article_outer {
+  flex-direction: column ;
+  height: auto;
+  width: 100%;
+}
+
+#news_div_main article.article_main .article_outer:hover {
+  transform: none;
+  box-shadow: 0 0 16px #affffe23;
+}
+
+#news_div_main article.article_main img.img_main {
+  width: 100%;
+  height: 40em;
+  object-fit: cover;
+}
+
+#news_div_main article.article_main h1 {
+  font-family: Gotham_Bold;
+  font-size: 2em;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 0em;
+}
+
+#news_div_main article.article_main .article {
+  width: 100%;
+  padding: 3em;
+  gap: 2em;
+}
+
+/* 
+   SECONDARY NEWS ROW
+ */
+
+#news_div_secondary {
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: nowrap;
+  width: 100vw;
+  padding: 3em;
+}
+
+.article_secondary_outer {
+  width: 400px;
+  border-radius: 20px;
+  padding: 1em;
+  height: 100%;
+  box-shadow: 0 0 16px #affffe23;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article_secondary_outer:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  box-shadow: 0 0 16px #affffe57;
+}
+
+.article_secondary_outer img.secondary_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.article_secondary_outer .article {
+  width: 100%;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.article_secondary_outer h3 {
+  font-size: 1.2em;
+}
+
+.article_secondary_outer p {
+  font-size: 0.9em;
+}
+
+
+.main_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+.main_page h5 {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  font-size: 4em;
+  font-family: Gotham_Medium;
+  color: var(--secondary_color_text);
+  justify-content: center;
+  font-size: 3em;
+}
+
+
+
+@media screen and (max-width:900px) {
+  /* 
+   GENERAL
+ */
+
+#news_div,
+#news_div_main,
+#news_div_secondary {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+article {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  padding: 3em;
+}
+
+/* 
+   REGULAR NEWS (DESKTOP)
+ */
+h1 {
+  align-self: self-start;
+}
+.article_outer {
+  width: 100%;
+  height: 25em;
+  margin: 3em auto;
+  display: flex;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 0 16px #affffe23;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article_outer:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 16px #affffe54;
+}
+
+.article_outer img {
+  width: 60% !important;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.article {
+  width: 40% ;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--main_color_text);
+}
+
+.article h3 {
+  font-family: Gotham_Bold;
+  font-size: 1em;
+}
+
+.article p {
+  font-family: Gotham_Medium;
+  font-size: 0.7em;
+
+}
+
+.article small {
+  font-family: Gotham_Thin;
+}
+
+/* 
+   NEWS HEADER
+ */
+
+#news_header {
+  padding: 6em 1.5em 1.5em;
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+}
+
+/* 
+   MAIN ARTICLE (SPECIFIC)
+ */
+
+#news_div_main article.article_main {
+  cursor: default;
+  flex-direction: column ;
+  padding:3em;
+  width:100%;
+}
+
+#news_div_main article.article_main .article_outer {
+  flex-direction: column ;
+  height: auto;
+  width: 100%;
+}
+
+#news_div_main article.article_main .article_outer:hover {
+  transform: none;
+  box-shadow: 0 0 16px #affffe23;
+}
+
+#news_div_main article.article_main .article_outer img.img_main {
+  width: 100% !important;
+  height: 20em;
+  object-fit: cover;
+}
+
+#news_div_main article.article_main h1 {
+  font-family: Gotham_Bold;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: white;
+  padding-left: 0em;
+}
+
+#news_div_main article.article_main .article {
+  width: 100%;
+  padding: 3em;
+  gap: 2em;
+}
+
+/* 
+   SECONDARY NEWS ROW
+ */
+
+#news_div_secondary {
+  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: nowrap;
+  width: 100vw;
+  padding: 3em;
+}
+
+.article_secondary_outer {
+  width: 400px;
+  border-radius: 20px;
+  padding: 1em;
+  height: 100%;
+  box-shadow: 0 0 16px #affffe23;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.article_secondary_outer:hover {
+  transform: scale(1.01);
+  cursor: pointer;
+  box-shadow: 0 0 16px #affffe57;
+}
+
+.article_secondary_outer img.secondary_img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
+
+.article_secondary_outer .article {
+  width: 100%;
+  padding: 0;
+  margin-top: 1em;
+}
+
+.article_secondary_outer h3 {
+  font-size: 1.2em;
+}
+
+.article_secondary_outer p {
+  font-size: 0.9em;
+}
+
+
+.main_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center ;
+}
+.main_page h5 {
+  display: flex;
+  align-self: center;
+  width: 100%;
+  font-size: 4em;
+  font-family: Gotham_Medium;
+  color: var(--secondary_color_text);
+  justify-content: center;
+  font-size: 3em;
+}
+}

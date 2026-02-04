@@ -1,0 +1,269 @@
+.header_about {
+  padding-top: 6em;
+  padding-bottom: 3em;
+  padding-left: 1.2em;
+  color: var(--main_color_text);
+  font-family: Gotham_Bold;
+}
+
+
+.main_div_outer {
+  width: 100vw;
+  height: auto;
+  padding: 3em;
+  padding-top: 0;
+}
+.main_div_inner {
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #353534;
+background: linear-gradient(360deg, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162, 1) 100%);
+  border-radius: 50px;
+}
+
+
+
+.text_content {
+  width: 50%;
+  color:var(--main_color_text);
+  font-family: Gotham_Medium
+}
+.text_content h1 {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+}
+
+h5#separator {
+  width: 100%;
+  color: var(--secondary_color_text);
+  font-family:Gotham_Book;
+  display:flex;
+  align-self: center;
+  justify-content: center;
+  padding: 3em;
+  border-bottom: 1px solid var(--secondary_color_text);
+}
+
+.link_img_b2b img {
+  height: auto;
+  width: 200px;
+  border-radius: 30px;
+}
+
+#carousel_b2b {
+  background: #353534;
+background: linear-gradient(0deg, rgba(53, 53, 52, 1) 15%, rgba(75, 91, 89, 1) 71%, rgba(117, 164, 162, 1) 100%);
+  display: flex;
+  padding: 3em;
+  margin-top: 3em;
+  gap: 4em;
+   width: max-content;
+  overflow-x: auto;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.623); 
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.651);
+  animation: scroll 20s linear infinite;
+  will-change: transform;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-49.8%);
+  }
+
+}
+
+#carousel_b2b:hover {
+  animation-play-state: paused;
+
+}
+div.partners {
+  padding-bottom: 5em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners h5 {
+  color: var(--secondary_color_text);
+  justify-content: center;
+  display: flex;
+  padding: 3em;
+  font-size: 1.5em;
+}
+
+.testimonials {
+  width: 100%;
+  padding: 3em;
+  
+}
+.testimonials h1 {
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+  padding: 1.2em;
+}
+.testimonials .testimonial {
+  width: 100%;
+  padding: 3em;
+  -webkit-box-shadow: 0px 7px 16px -9px rgba(0,0,0,0.77); 
+box-shadow: 0px 7px 16px -9px rgba(0,0,0,0.77);
+  
+}
+.testimonials .testimonial {
+ color: var(--main_color_text);
+width: 70%;
+}
+
+.testimonials .testimonial h4{
+  font-family: Gotham_Bold;
+}
+
+
+
+@media screen and (max-width:900px) {
+  .header_about {
+  padding-top: 6em;
+  padding-bottom: 3em;
+  padding-left: 1.2em;
+  color: var(--main_color_text);
+  font-family: Gotham_Bold;
+}
+
+
+.main_div_outer {
+  width: 100vw;
+  height: auto;
+  padding: 3em;
+  padding-top: 0;
+}
+.main_div_inner {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: space-around;
+  background: #353534;
+background: linear-gradient(360deg, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162, 1) 100%);
+  border-radius: 50px;
+}
+
+.main_div_inner img {
+  width: 100px;
+  padding-top: 1em;
+};
+
+.text_content {
+  width: 90%;
+  color:var(--main_color_text);
+  font-family: Gotham_Medium;
+  font-size: 0.6em;
+}
+.text_content h1 {
+  text-transform: uppercase;
+  padding-bottom: 1em;
+  display: flex;
+  padding-top: 0.5em;
+  align-self: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+h5#separator {
+  width: 100%;
+  color: var(--secondary_color_text);
+  font-family:Gotham_Book;
+  font-size: 0.6em;
+  display:flex;
+  align-self: center;
+  justify-content: center;
+  padding: 3em;
+  border-bottom: 1px solid var(--secondary_color_text);
+}
+
+.link_img_b2b img {
+  height: auto;
+  width: 100px;
+  border-radius: 30px;
+}
+
+#carousel_b2b {
+  background: #353534;
+background: linear-gradient(0deg, rgba(53, 53, 52, 1) 15%, rgba(75, 91, 89, 1) 71%, rgba(117, 164, 162, 1) 100%);
+  display: flex;
+  padding: 3em;
+  margin-top: 3em;
+  gap: 2em;
+   width: max-content;
+  overflow-x: auto;
+  height: auto;
+  -webkit-box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.623); 
+  box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.651);
+  animation: scroll 40s linear infinite;
+  will-change: transform;
+}
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-49.8%);
+  }
+
+}
+
+#carousel_b2b:hover {
+  animation-play-state: paused;
+
+}
+div.partners {
+  padding-bottom: 5em;
+  width: 100%;
+  overflow: hidden;
+}
+
+.partners h5 {
+  color: var(--secondary_color_text);
+  justify-content: center;
+  display: flex;
+  padding: 3em;
+  font-size: 1.5em;
+}
+
+.testimonials {
+  width: 100%;
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.testimonials h1 {
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+  padding: 1em;
+  font-size: 1em;
+}
+.testimonials .testimonial {
+  width: 100%;
+  padding: 3em;
+  font-size: 0.5em;
+  -webkit-box-shadow: 0px 7px 16px -9px rgba(0,0,0,0.77); 
+box-shadow: 0px 7px 16px -9px rgba(0,0,0,0.77);
+  
+}
+.testimonials .testimonial {
+ color: var(--main_color_text);
+width: 70%;
+}
+
+.testimonials .testimonial h4{
+  font-family: Gotham_Bold;
+  font-size: 2em;
+}
+  
+}

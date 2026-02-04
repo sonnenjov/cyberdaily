@@ -1,0 +1,113 @@
+.login_header {
+  padding:1.2em;
+  padding-top: 6em;
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+
+}
+.main_page_login {
+  height: fit-content;
+  padding: 1em;
+}
+.form_outer {
+  width: 100%;
+  height: auto;
+  padding: 3em;
+}
+#login_form {
+  background: #353534;
+background: linear-gradient(180deg, rgba(53, 53, 52, 1) 15%, rgba(75, 91, 89, 1) 71%, rgba(117, 164, 162, 1) 100%);
+  background-color: var(--main_color_text);
+  display: flex;
+  border-radius: 50px;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 7em;
+  transition: 500ms ease-in-out;
+}
+form#login_form label {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  margin: 2em;
+  color: var(--main_color_text);
+  font-family: Gotham_Book;
+  font-size: 1.2em;
+  gap: 1em;
+}
+
+form#login_form label input {
+  border: none;
+  background-color: var(--main_color_bg);
+  border: 1px solid var(--main_color_bg);
+  outline: #353534;
+  border: none;
+  color: white;
+}
+form#login_form label input:focus {
+  outline: #353534;
+  border: none;
+  color: white;
+  background-color: var(--main_color_bg);
+  border: 1px solid var(--main_color_bg);
+}
+
+form#login_form  button {
+  border: none;
+  outline: none;
+  background-color: var(--secondary_color_text);
+  padding: 1em 3em;
+  border-radius: 10px;
+  font-family: Gotham_Bold;
+  color: var(--main_color_bg);
+  
+}
+
+#rules_password {
+  display: none;
+  transition: 500ms ease-in-out;
+
+}
+
+
+#rules_password.active {
+  display: flex;
+  transition: 500ms ease-in-out;
+
+}
+
+#rules_password li {
+  color: #FFC9AB;
+}
+
+#rules_password li.valid {
+  color: var(--secondary_color_text);
+}
+
+
+
+.main_page_login_success {
+  height: 100vh !important;
+  display: flex;
+  flex-direction: column;
+  gap: 2em; 
+  color: white;
+  font-family: Gotham_Bold;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+ @media screen and (max-width: 900px) {
+ 
+.main_page_login {
+  height: fit-content;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+}

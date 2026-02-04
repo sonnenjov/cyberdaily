@@ -1,0 +1,107 @@
+
+#empty_div {
+  height: 20vh;;
+}
+div#header_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+div#header_div h1 {
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+  font-size: 3em;
+}
+div#header_div p {
+  font-family: Gotham_Medium;
+  color: var(--secondary_color_text);
+}
+/* div#text_logo {
+
+} */
+div#text_logo_inner {
+  margin-top: 3.5em;
+  background-color: var(--secondary_color_text);
+  padding: 5em;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+  border-radius: 50px;
+  background: #353534;
+  background: linear-gradient(136deg, rgba(53, 53, 52, 1) 0%, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162, 1) 100%);
+  -webkit-box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.61); 
+  box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.61);
+}
+
+div#text_logo_inner  p {
+  width: 40%;
+  font-family: Gotham_Medium;
+  color: white;
+}
+
+
+ #separator h5 {
+ color: var(--main_color_text);
+ }
+ #news_div {
+  padding: 3em;
+ }
+ 
+
+
+ @media screen and (max-width: 900px) {
+ 
+div#header_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div#header_div h1 {
+  font-family: Gotham_Black;
+  color: var(--main_color_text);
+  font-size: 1.5em;
+}
+div#header_div p {
+  font-family: Gotham_Medium;
+  color: var(--secondary_color_text);
+}
+div#text_logo_inner img  {
+  width: 30%;
+}
+div#text_logo_inner {
+  margin-top: 3.5em;
+  background-color: var(--secondary_color_text);
+  display: flex;
+  flex-direction: column !important;
+  padding: 2em;
+  height: 60vh;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+  border-radius: 50px;
+  background: #353534;
+  background: linear-gradient(136deg, rgba(53, 53, 52, 1) 0%, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162, 1) 100%);
+  -webkit-box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.61); 
+  box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.61);
+}
+
+div#text_logo_inner  p {
+  font-size: 0.5em;
+  width: 100%;
+  font-family: Gotham_Medium;
+  color: white;
+}
+
+
+ #separator h5 {
+ color: var(--main_color_text);
+ padding-bottom: 1em;
+ border-bottom:1px solid var(--secondary_color_text) !important;
+ }
+ #news_div {
+  padding: 3em;
+ }
+ 
+ }
