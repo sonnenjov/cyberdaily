@@ -284,9 +284,9 @@ transition: 500ms ease;
       justify-content: space-between;
       align-items: center;
       position: fixed !important; 
-      height: fit-content !important;
+      height: min-content !important;
       bottom: 0 !important;
-      top: 93.3vh !important;
+      top: 92vh !important;
       transition: 500ms ease;
     }
     #main_nav.mobile div#logo_container {
@@ -389,7 +389,7 @@ transition: 500ms ease;
     flex-direction: column !important;
     align-items: center !important;
     gap: 1em !important;
-    padding-bottom: 5em !important;
+    padding-bottom: 6em !important;
 
   }
   #footer_img {
@@ -455,5 +455,9 @@ transition: 500ms ease;
   background-color: transparent !important;
   border: none;
   color: var(--main_color_text);
-
+  font-size: 0.8em;
  }
+.lang_btns button.active {
+  color: var(--secondary_color_text);
+  font-family: Gotham_Book;
+}

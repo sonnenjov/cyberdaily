@@ -81,3 +81,15 @@ document.getElementById("login_form").addEventListener("submit", async e => {
 
   window.location.href = "../pages/login_success.html";
 });
+
+const togglePassword = document.getElementById("togglePassword");
+const eyeOpen = document.getElementById("eyeOpen");
+const eyeClosed = document.getElementById("eyeClosed");
+
+togglePassword.addEventListener("click", () => {
+  const isHidden = passwordInput.type === "password";
+
+  passwordInput.type = isHidden ? "text" : "password";
+  eyeOpen.hidden = !isHidden;
+  eyeClosed.hidden = isHidden;
+});

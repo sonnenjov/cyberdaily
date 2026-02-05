@@ -68,5 +68,9 @@ document.getElementById("burger_main").addEventListener('click', button_burger_t
 window.addEventListener("resize", width_nav)
 window.addEventListener("load", width_nav)
 window.addEventListener("scroll", onScroll);
+document.addEventListener("DOMContentLoaded", async () => {
+  const savedLang = localStorage.getItem("lang") || "en";
+  await setLanguage(savedLang);
+});
 
 // 

@@ -21,11 +21,13 @@ async function loadTranslations(lang) {
 
 async function setLanguage(lang, newsItems = []) {
   localStorage.setItem("lang", lang);
+
   let translations = await loadTranslations(lang);
 
   newsItems.forEach((item, index) => {
     const titleKey = `news_elem_h3${index}`;
     const descKey = `news_elem_p${index}`;
+
     if (!translations[titleKey]) translations[titleKey] = item.title;
     if (!translations[descKey]) translations[descKey] = item.description;
   });
@@ -61,13 +63,14 @@ function createArticle(items) {
   const itemIdStored = storedItemObj ? storedItemObj.id : null;
 
   items.forEach(e => {
-    const title = translations[`news_elem_h${e.id}`] || e.title;
+    const title = translations[`news_elem_h3${e.id}`] || e.title;
     const description = translations[`news_elem_p${e.id}`] || e.description;
     const imgSrc = images[e.id % images.length];
 
     if (e.id === itemIdStored) {
       const article = document.createElement("article");
       article.classList.add("article_main");
+
       article.innerHTML = `
         <h1 data-i18n="news_elem_h3${e.id}">${title}</h1>
         <div data-item-id="${e.id}" class="article_outer">
@@ -76,11 +79,14 @@ function createArticle(items) {
             <p data-i18n="news_elem_p${e.id}" class="main_text_paragraph">${description}</p>
             <small>${e.date}</small>
           </div>
-        </div>`;
+        </div>
+      `;
+
       news_div_main.append(article);
     } else {
       const article_secondary = document.createElement("div");
       article_secondary.classList.add("article_secondary");
+
       article_secondary.innerHTML = `
         <div data-item-id="${e.id}" onclick="viewDetails(this)" class="article_secondary_outer">
           <img class="secondary_img" src="${imgSrc}" alt="news_image">
@@ -89,21 +95,24 @@ function createArticle(items) {
             <p data-i18n="news_elem_p${e.id}">${description}</p>
             <small>${e.date}</small>
           </div>
-        </div>`;
+        </div>
+      `;
+
       news_div_secondary.append(article_secondary);
     }
   });
 }
 
 function viewDetails(clickedElement) {
-  const itemId = clickedElement.getAttribute('data-item-id');
+  const itemId = clickedElement.getAttribute("data-item-id");
   const selectedItem = normalized.find(e => e.id === parseInt(itemId));
+
   localStorage.setItem("selectedProduct", JSON.stringify(selectedItem));
-  window.location.href = `../pages/news_specific.html`;
+  window.location.href = "../pages/news_specific.html";
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  storedItem = localStorage.getItem('selectedProduct');
+  storedItem = localStorage.getItem("selectedProduct");
 
   const news = await fetchNews();
   normalized = news.map((item, index) => ({

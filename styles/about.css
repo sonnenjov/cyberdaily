@@ -153,8 +153,8 @@ background: linear-gradient(360deg, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162,
 }
 
 .main_div_inner img {
-  width: 100px;
-  padding-top: 1em;
+  width: 50px;
+  padding-top: 0.2em !important;
 };
 
 .text_content {
@@ -162,6 +162,11 @@ background: linear-gradient(360deg, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162,
   color:var(--main_color_text);
   font-family: Gotham_Medium;
   font-size: 0.6em;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  align-items: center;
 }
 .text_content h1 {
   text-transform: uppercase;
@@ -170,7 +175,15 @@ background: linear-gradient(360deg, rgba(53, 53, 52, 1) 15%, rgba(117, 164, 162,
   padding-top: 0.5em;
   align-self: center;
   justify-content: center;
-  font-size: 1.2em;
+  font-size: 1.3em;
+}
+
+.text_content p {
+  font-size: 0.6em;
+  width: 80%;
+  padding-bottom: 16em !important;
+  justify-content: center;
+  align-self: center;
 }
 
 h5#separator {
@@ -236,17 +249,18 @@ div.partners {
 
 .testimonials {
   width: 100%;
-  padding: 3em;
+  padding: 2em !important;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   
 }
 .testimonials h1 {
   font-family: Gotham_Black;
   color: var(--main_color_text);
-  padding: 1em;
-  font-size: 1em;
+  padding: 0em;
+  color: var(--secondary_color_text);
+  font-size: 1.3em;
 }
 .testimonials .testimonial {
   width: 100%;

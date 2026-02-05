@@ -110,4 +110,139 @@ form#login_form  button {
   flex-direction: column;
   align-items: center;
 }
+
+.form_outer {
+  width: 100%;
+  height: auto;
+  padding: 2em;
+}
+#login_form {
+  background: #353534;
+background: linear-gradient(180deg, rgba(53, 53, 52, 1) 15%, rgba(75, 91, 89, 1) 71%, rgba(117, 164, 162, 1) 100%);
+  background-color: var(--main_color_text);
+  display: flex;
+  border-radius: 30px;
+  height: fit-content;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1em;
+  transition: 500ms ease-in-out;
+}
+form#login_form label {
+  display: flex;
+  flex-direction: column;
+  padding: 0em;
+  margin: 1em;
+  color: var(--main_color_text);
+  font-family: Gotham_Book;
+  font-size: 0.3m !important;
+  gap: 0.1em;
+}
+
+form#login_form label input {
+  border: none;
+  background-color: var(--main_color_bg);
+  border: 1px solid var(--main_color_bg);
+  outline: #353534;
+  border: none;
+  color: white;
+  width: 90%;
+  font-size: 0.8em;
+}
+form#login_form label input:focus {
+  outline: #353534;
+  border: none;
+  color: white;
+  background-color: var(--main_color_bg);
+  border: 1px solid var(--main_color_bg);
+}
+
+form#login_form  button {
+  border: none;
+  outline: none;
+  background-color: var(--secondary_color_text);
+  padding: 1em 3em;
+  border-radius: 10px;
+  font-family: Gotham_Bold;
+  color: var(--main_color_bg);
+  
+}
+
+#rules_password {
+  display: none;
+  transition: 500ms ease-in-out;
+
+}
+
+
+#rules_password.active {
+  display: flex;
+  transition: 500ms ease-in-out;
+  font-size: 0.6em;
+}
+
+#rules_password li {
+  color: #FFC9AB;
+}
+
+#rules_password li.valid {
+  color: var(--secondary_color_text);
+}
+
+}
+
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+.password-wrapper button {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent !important;
+  padding: 15px !important;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  padding-right: 4px;
+}
+
+#togglePassword {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  color: black;
+}
+
+#togglePassword svg {
+  width: 20px;
+  height: 20px;
+  color: white;
+  stroke: currentColor;
+  stroke-width: 1.7;
+}
+
+#togglePassword:hover {
+  color: #000;
 }

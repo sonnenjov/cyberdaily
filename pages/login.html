@@ -59,9 +59,10 @@
           </li>
         </a>
         <div class="lang_btns">
-        <button onclick="setLanguage('en')">EN</button>
+       <div class="lang_btns">
+        <button id="en" class="lang-btn" onclick="setLanguage('en')">EN</button>
         /
-        <button onclick="setLanguage('rs')">SR</button>
+        <button id="rs" class="lang-btn" onclick="setLanguage('rs')">SR</button>
       </div>
       </ul>
     </div>
@@ -95,15 +96,31 @@
           <p data-i18n="password">
             Password
           </p>
-          <input 
-          type="password" 
-          required 
-          id="password"> 
+          <div class="password-wrapper">
+            <input 
+              type="password" 
+              required 
+              id="password">
+
+                <button type="button" id="togglePassword" aria-label="Toggle password">
+                  <svg id="eyeOpen" viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="3"/>
+                    <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6-10-6-10-6z"/>
+                  </svg>
+
+                  <!-- closed eye -->
+                  <svg id="eyeClosed" viewBox="0 0 24 24" hidden>
+                    <path d="M3 3l18 18"/>
+                    <path d="M2 12s4-6 10-6c2.2 0 4.1.6 5.7 1.5M22 12s-4 6-10 6c-2.2 0-4.1-.6-5.7-1.5"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                </button>
+        </div>  
           <div id="rules_password">
             <ul>
               <li data-i18n="upper" id="rule-upper">At least one big letter
               </li>
-              <li data-i18n="num,"  id="rule-number">At least one number
+              <li data-i18n="num"  id="rule-number">At least one number
               </li>
               <li data-i18n="special"  id="rule-special">At least one special character
               </li>
