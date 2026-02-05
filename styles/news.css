@@ -297,7 +297,9 @@ h1 {
   width: 100%;
 }
 .main_text_paragraph {
-  font-size: 0.9em !important;
+  font-size: 0.8em !important;
+  width: 100% !important;
+  margin: 0;
 }
 #news_div_main article.article_main .article_outer:hover {
   transform: none;
@@ -320,7 +322,7 @@ h1 {
 
 #news_div_main article.article_main .article {
   width: 100%;
-  padding: 3em;
+  padding: 1em;
   gap: 2em;
 }
 
@@ -375,7 +377,11 @@ h1 {
   font-size: 0.9em;
 }
 
-
+#spearator_news {
+  font-size: 1.5em;
+  padding: 1em;
+  padding-top: 2em;
+}
 .main_page {
   display: flex;
   flex-direction: column;

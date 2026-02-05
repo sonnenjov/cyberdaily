@@ -62,6 +62,10 @@ div#header_div h1 {
   font-family: Gotham_Black;
   color: var(--main_color_text);
   font-size: 1.5em;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-left: 1.7em;
 }
 div#header_div p {
   font-family: Gotham_Medium;
